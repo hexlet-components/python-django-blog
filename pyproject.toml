@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "python-django-blog"
+version = "0.1.0"
+description = "A simple Django project that implements a simple blog"
+authors = ["Hexlet Team <info@hexlet.io>"]
+license = "ISC"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+Django = "^3.2.3"
+django-bootstrap4 = "^3.0.1"
+python-dotenv = "^0.17.1"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

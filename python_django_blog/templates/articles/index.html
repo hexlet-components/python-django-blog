@@ -1,0 +1,35 @@
+{% extends 'layouts/application.html' %}
+
+{% block header %}
+List of Articles
+{% endblock %}
+
+{% block content %}
+<a class="nav-link" href="{% url 'articles:create' %}">Create article</a>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>id</th>
+      <th>name</th>
+      <th>created date</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for article in article_list %}
+      <tr>
+        <td>{{ article.id }}</td>
+        <td>
+          <a href="{% url 'articles:detail' article.id %}">{{ article.name }}</a>
+        </td>
+        <td>{{ article.created_at|date:"d.m.Y H:i" }}</td>
+        <td>
+          <a href="{% url 'articles:update' article.id %}">Update</a>
+          <br>
+          <a href="{% url 'articles:delete' article.id %}">Delete</a>
+        </td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

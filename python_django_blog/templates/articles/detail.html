@@ -1,0 +1,16 @@
+{% extends 'layouts/application.html' %}
+
+{% block header %}
+Show article
+{% endblock %}
+
+{% block content %}
+<div class="card">
+  <div class="card-header bg-secondary text-white">
+    <h2>{{ article.name }}</h2>
+  </div>
+  <div class="card-body bg-light">
+    <p>{{ article.description }}</p>
+  </div>
+</div>
+{% endblock %}

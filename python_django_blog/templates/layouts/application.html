@@ -1,0 +1,35 @@
+{% load bootstrap4 %}
+{% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+
+<!DOCTYPE html>
+<html lang="{{ LANGUAGE_CODE }}">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Django</title>
+    {% bootstrap_css %}
+  </head>
+  <body class="bg-light">
+    <div class="container mt-4">
+      <ul class="nav">
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'root' %}">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'about' %}">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'articles:index' %}">Articles</a>
+        </li>
+      </ul>
+    </div>
+    <div class="container mt-4">
+      <h1>
+        {% block header %}
+        {% endblock %}
+      </h1>
+      {% block content %}
+      {% endblock %}
+    </div>
+  </body>
+</html>

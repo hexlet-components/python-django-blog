@@ -1,0 +1,12 @@
+{% extends 'layouts/application.html' %}
+{% load bootstrap4 %}
+
+{% block content %}
+<form method="post">
+  {% csrf_token %}
+  {% bootstrap_form form %}
+  {% buttons %}
+    <input class="btn btn-primary" type="submit" value="{% block button_value %}{% endblock %}">
+  {% endbuttons %}
+</form>
+{% endblock %}
