@@ -1,0 +1,12 @@
+{
+  "articles": {
+    "new": {
+      "name": "article new",
+      "description": "description new"
+    },
+    "existing": {
+      "name": "article two",
+      "description": "description two"
+    }
+  }
+}
