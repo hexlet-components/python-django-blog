@@ -1,7 +1,8 @@
 {% extends 'layouts/form.html' %}
+{% load i18n %}
 
 {% block header %}
-Update article
+{% translate "Update article" %}
 {% endblock %}
 
-{% block button_value %}Update{% endblock %}
+{% block button_value %}{% translate "Update" %}{% endblock %}

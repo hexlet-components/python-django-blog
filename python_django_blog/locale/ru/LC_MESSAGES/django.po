@@ -1,0 +1,108 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-05-30 10:11+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
+#: python_django_blog/articles/models.py:8
+#: python_django_blog/templates/articles/index.html:14
+msgid "name"
+msgstr "наименование"
+
+#: python_django_blog/articles/models.py:9
+msgid "description"
+msgstr "описание"
+
+#: python_django_blog/articles/models.py:10
+#: python_django_blog/templates/articles/index.html:15
+msgid "created date"
+msgstr "дата создания"
+
+#: python_django_blog/templates/about.html:5
+msgid "About the blog"
+msgstr "О блоге"
+
+#: python_django_blog/templates/about.html:9
+msgid "Experimenting with Django on Hexlet"
+msgstr "Эксперименты с Django на Хекслете"
+
+#: python_django_blog/templates/articles/create.html:5
+#: python_django_blog/templates/articles/index.html:9
+msgid "Create article"
+msgstr "Создать статью"
+
+#: python_django_blog/templates/articles/create.html:8
+msgid "Create"
+msgstr "Создать"
+
+#: python_django_blog/templates/articles/delete.html:5
+msgid "Delete article"
+msgstr "Удаление статьи"
+
+#: python_django_blog/templates/articles/detail.html:5
+msgid "Show article"
+msgstr "Просмотр статьи"
+
+#: python_django_blog/templates/articles/index.html:5
+msgid "List of Articles"
+msgstr "Список статей"
+
+#: python_django_blog/templates/articles/index.html:13
+msgid "id"
+msgstr "id"
+
+#: python_django_blog/templates/articles/index.html:28
+#: python_django_blog/templates/articles/update.html:8
+msgid "Update"
+msgstr "Изменить"
+
+#: python_django_blog/templates/articles/index.html:30
+msgid "Delete"
+msgstr "Удалить"
+
+#: python_django_blog/templates/articles/update.html:5
+msgid "Update article"
+msgstr "Изменение статьи"
+
+#: python_django_blog/templates/index.html:5
+msgid "Python Django Blog"
+msgstr "Python Django Blog"
+
+#: python_django_blog/templates/layouts/application.html:9
+msgid "Django"
+msgstr "Django"
+
+#: python_django_blog/templates/layouts/application.html:16
+msgid "Home"
+msgstr "Главная"
+
+#: python_django_blog/templates/layouts/application.html:19
+msgid "About"
+msgstr "О блоге"
+
+#: python_django_blog/templates/layouts/application.html:22
+msgid "Articles"
+msgstr "Статьи"
+
+#: python_django_blog/templates/layouts/confirm_delete.html:5
+msgid "Are you sure you want to delete"
+msgstr "Вы уверены, что хотите удалить"
+
+#: python_django_blog/templates/layouts/confirm_delete.html:8
+msgid "Yes, delete"
+msgstr "Да, удалить"

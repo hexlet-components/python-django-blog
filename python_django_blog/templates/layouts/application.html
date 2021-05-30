@@ -6,20 +6,20 @@
 <html lang="{{ LANGUAGE_CODE }}">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Django</title>
+    <title>{% translate "Django" %}</title>
     {% bootstrap_css %}
   </head>
   <body class="bg-light">
     <div class="container mt-4">
       <ul class="nav">
         <li class="nav-item">
-          <a class="nav-link" href="{% url 'root' %}">Home</a>
+          <a class="nav-link" href="{% url 'root' %}">{% translate "Home" %}</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{% url 'about' %}">About</a>
+          <a class="nav-link" href="{% url 'about' %}">{% translate "About" %}</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{% url 'articles:index' %}">Articles</a>
+          <a class="nav-link" href="{% url 'articles:index' %}">{% translate "Articles" %}</a>
         </li>
       </ul>
     </div>

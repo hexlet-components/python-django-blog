@@ -1,17 +1,18 @@
 {% extends 'layouts/application.html' %}
+{% load i18n %}
 
 {% block header %}
-List of Articles
+{% translate "List of Articles" %}
 {% endblock %}
 
 {% block content %}
-<a class="nav-link" href="{% url 'articles:create' %}">Create article</a>
+<a class="nav-link" href="{% url 'articles:create' %}">{% translate "Create article" %}</a>
 <table class="table table-striped">
   <thead>
     <tr>
-      <th>id</th>
-      <th>name</th>
-      <th>created date</th>
+      <th>{% translate "id"|upper %}</th>
+      <th>{% translate "name"|capfirst %}</th>
+      <th>{% translate "created date"|capfirst %}</th>
       <th></th>
     </tr>
   </thead>
@@ -24,9 +25,9 @@ List of Articles
         </td>
         <td>{{ article.created_at|date:"d.m.Y H:i" }}</td>
         <td>
-          <a href="{% url 'articles:update' article.id %}">Update</a>
+          <a href="{% url 'articles:update' article.id %}">{% translate "Update" %}</a>
           <br>
-          <a href="{% url 'articles:delete' article.id %}">Delete</a>
+          <a href="{% url 'articles:delete' article.id %}">{% translate "Delete" %}</a>
         </td>
       </tr>
     {% endfor %}

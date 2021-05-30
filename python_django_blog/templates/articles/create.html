@@ -1,7 +1,8 @@
 {% extends 'layouts/form.html' %}
+{% load i18n %}
 
 {% block header %}
-Create article
+{% translate "Create article" %}
 {% endblock %}
 
-{% block button_value %}Create{% endblock %}
+{% block button_value %}{% translate "Create" %}{% endblock %}
