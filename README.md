@@ -1,6 +1,6 @@
 # python-django-blog
 
-[![github action status](https://github.com/hexlet-components/python-django-blog/workflows/Python%CI/badge.svg)](https://github.com/hexlet-components/python-django-blog/actions)
+[![github action status](https://github.com/hexlet-components/python-django-blog/workflows/Python%20CI/badge.svg)](https://github.com/hexlet-components/python-django-blog/actions)
 
 ### Setup
 
