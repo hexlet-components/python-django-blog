@@ -15,6 +15,9 @@ compose:
 install:
 	poetry install
 
+setup: install
+	cp -n .env.example .env || true
+
 start:
 	poetry run python manage.py runserver 0.0.0.0:8000
 
