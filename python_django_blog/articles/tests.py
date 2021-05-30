@@ -75,3 +75,10 @@ class ArticleTest(TestCase):
         self.assertRedirects(response, reverse('articles:index'))
         with self.assertRaises(ObjectDoesNotExist):
             Article.objects.get(name=exist_article_data['name'])
+
+    def test_detail_page(self):
+        exist_article_data = self.test_data['articles']['existing']
+        exist_article = Article.objects.get(name=exist_article_data['name'])
+        response = self.client.get(reverse('articles:detail', args=[exist_article.pk]))
+
+        self.assertEqual(response.status_code, 200)
