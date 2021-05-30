@@ -2,6 +2,14 @@
 
 [![github action status](https://github.com/hexlet-components/python-django-blog/workflows/Python%20CI/badge.svg)](https://github.com/hexlet-components/python-django-blog/actions)
 
+[Demo on Heroku](https://hexlet-python-django-blog.herokuapp.com/)
+
+### Requirements
+
+  * Python 3.8+
+  * Poetry
+  * GNU Make
+
 ### Setup
 
 ```sh
