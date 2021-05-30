@@ -21,11 +21,13 @@ compose-test:
 install:
 	poetry install
 
-setup: install
-	cp -n .env.example .env || true
-
 migrate:
 	poetry run python manage.py migrate
+
+setup:
+	cp -n .env.example .env || true
+	make install
+	make migrate
 
 start:
 	poetry run python manage.py runserver 0.0.0.0:8000
