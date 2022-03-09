@@ -2,7 +2,7 @@
 
 [![github action status](https://github.com/hexlet-components/python-django-blog/workflows/Python%20CI/badge.svg)](https://github.com/hexlet-components/python-django-blog/actions)
 
-[Demo on Heroku](https://hexlet-python-django-blog.herokuapp.com/)
+[Demo on Heroku](https://python-django-blog.hexlet.app)
 
 ### Requirements
 
