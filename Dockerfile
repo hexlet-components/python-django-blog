@@ -11,4 +11,4 @@ COPY uv.lock .
 
 RUN uv sync
 
-CMD ["bash", "-c", "make migrate && uv run gunicorn python_django_blog.wsgi --log-file -"]
+CMD ["bash", "-c", "uv run manage.py migrate && uv run gunicorn python_django_blog.wsgi --log-file -"]
