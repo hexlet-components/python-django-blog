@@ -6,8 +6,8 @@
 
 ## Requirements
 
-* Python 3.8+
-* Poetry
+* Python 3.13+
+* uv
 * GNU Make
 
 ## Setup
