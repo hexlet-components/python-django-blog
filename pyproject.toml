@@ -1,24 +1,21 @@
-[tool.poetry]
+[project]
 name = "python-django-blog"
 version = "0.1.0"
 description = "A simple Django project that implements a simple blog"
-authors = ["Hexlet Team <info@hexlet.io>"]
+authors = [{name="Hexlet Team <info@hexlet.io>"}]
 license = "ISC"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "dj-database-url>=2.3.0",
+    "django>=5.1.7",
+    "django-bootstrap4>=25.1",
+    "gunicorn>=23.0.0",
+    "python-dotenv>=1.1.0",
+    "whitenoise>=6.9.0",
+]
 
-[tool.poetry.dependencies]
-python = "^3.8"
-Django = "^3.2.3"
-django-bootstrap4 = "^3.0.1"
-python-dotenv = "^0.17.1"
-gunicorn = "^20.1.0"
-whitenoise = "^5.2.0"
-dj-database-url = "^0.5.0"
-psycopg2-binary = "^2.8.6"
-
-[tool.poetry.dev-dependencies]
-flake8 = "^3.9.2"
-coverage = "^5.5"
-
-[build-system]
-requires = ["poetry-core>=1.0.0"]
-build-backend = "poetry.core.masonry.api"
+[dependency-groups]
+dev = [
+    "ruff>=0.11.2",
+]

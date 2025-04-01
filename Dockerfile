@@ -1,17 +1,14 @@
-FROM python:3.8.10-slim
+FROM python:3.13.2-slim
 
 RUN apt-get update && apt-get install -yq make gettext
 
-RUN pip3 install -U poetry
-RUN poetry config virtualenvs.in-project true
+COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin/
 
 WORKDIR /app
 
 COPY pyproject.toml .
-COPY poetry.lock .
+COPY uv.lock .
 
-RUN poetry install
+RUN uv sync
 
-COPY . .
-
-CMD ["bash", "-c", "make migrate && poetry run gunicorn python_django_blog.wsgi --log-file -"]
+CMD ["bash", "-c", "make migrate && uv run gunicorn python_django_blog.wsgi --log-file -"]
