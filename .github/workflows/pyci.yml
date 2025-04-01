@@ -12,32 +12,20 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        python-version: [3.8, 3.9]
-
     steps:
-      - uses: actions/checkout@v2
-
-      - name: Set up Python ${{ matrix.python-version }}
-        uses: actions/setup-python@v2
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
         with:
-          python-version: ${{ matrix.python-version }}
+          python-version: '3.13'
 
       - name: Install dependencies
         run: |
-          pip install poetry
+          pip install uv
           make setup
 
-      - name: Run selfcheck and linter
+      - name: Run tests and linter
         run: |
           make check
-          make lint
-
-      - name: Run tests
-        run: |
-          make test
-
 
   deploy:
     needs: build
