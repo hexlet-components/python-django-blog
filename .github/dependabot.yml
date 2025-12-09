@@ -1,0 +1,52 @@
+---
+version: 2
+updates:
+  # === GitHub Actions ===
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+    labels: [dependencies, automated, actions]
+    groups:
+      actions-minor-patch:
+        update-types: [minor, patch]
+      actions-major:
+        update-types: [major]
+  # === Python dev (pip) ===
+  - package-ecosystem: pip
+    directory: /
+    schedule:
+      interval: weekly
+    labels: [dependencies, automated, dev]
+    groups:
+      pip-dev-minor-patch:
+        patterns:
+          - pytest*
+          - flake8*
+          - black
+          - isort
+          - mypy*
+          - coverage*
+          - tox*
+          - ruff
+          - pylint*
+          - bandit
+          - pre-commit
+          - sphinx*
+          - mkdocs*
+        update-types: [minor, patch]
+  # === Python runtime (pip) ===
+  - package-ecosystem: pip
+    directory: /
+    schedule:
+      interval: weekly
+    labels: [dependencies, automated, runtime]
+    groups:
+      pip-runtime-minor-patch:
+        update-types: [minor, patch]
+  # === Docker ===
+  - package-ecosystem: docker
+    directory: /
+    schedule:
+      interval: weekly
+    labels: [dependencies, automated, docker]
