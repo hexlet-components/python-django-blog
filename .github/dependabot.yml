@@ -9,8 +9,10 @@ updates:
     labels: [dependencies, automated, actions]
     groups:
       actions-minor-patch:
+        patterns: ["*"]
         update-types: [minor, patch]
       actions-major:
+        patterns: ["*"]
         update-types: [major]
   # === Python dev (pip) ===
   - package-ecosystem: pip
@@ -43,6 +45,7 @@ updates:
     labels: [dependencies, automated, runtime]
     groups:
       pip-runtime-minor-patch:
+        patterns: ["*"]
         update-types: [minor, patch]
   # === Docker ===
   - package-ecosystem: docker
