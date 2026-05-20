@@ -1,4 +1,4 @@
-FROM python:3.13.2-slim
+FROM python:3.14.5-slim
 
 RUN apt-get update && apt-get install -yq make gettext
 
