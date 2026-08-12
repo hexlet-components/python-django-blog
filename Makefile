@@ -38,7 +38,7 @@ lint:
 test:
 	uv run manage.py test
 
-check: test lint
+check: install lint test
 
 test-coverage:
 	uv run coverage run manage.py test python_django_blog

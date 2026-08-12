@@ -1,31 +1,39 @@
 version: 2
 updates:
+  # Экосистема uv покрывает и pyproject.toml, и uv.lock. Отдельный блок pip на
+  # том же каталоге давал бы вторую пачку PR на те же зависимости.
   - package-ecosystem: "uv"
     directory: "/"
     schedule:
       interval: "monthly"
     open-pull-requests-limit: 1
+    labels: ["dependencies", "automated"]
+    commit-message:
+      prefix: "chore"
     groups:
-      all-uv-dependencies:
-        patterns:
-          - "*"
-
-  - package-ecosystem: "docker"
-    directory: "/"
-    schedule:
-      interval: "monthly"
-    open-pull-requests-limit: 1
-    groups:
-      all-docker-dependencies:
-        patterns:
-          - "*"
+      uv-all:
+        patterns: ["*"]
 
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
       interval: "monthly"
     open-pull-requests-limit: 1
+    labels: ["dependencies", "automated"]
+    commit-message:
+      prefix: "chore"
     groups:
-      all-github-actions-dependencies:
-        patterns:
-          - "*"
+      github-actions-all:
+        patterns: ["*"]
+
+  - package-ecosystem: "docker"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+    open-pull-requests-limit: 1
+    labels: ["dependencies", "automated"]
+    commit-message:
+      prefix: "chore"
+    groups:
+      docker-all:
+        patterns: ["*"]

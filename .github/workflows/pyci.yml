@@ -14,18 +14,19 @@ jobs:
 
     steps:
       - uses: actions/checkout@v7
-      - uses: actions/setup-python@v7
-        with:
-          python-version: '3.13'
 
-      - name: Install dependencies
-        run: |
-          pip install uv
-          make setup
+      # setup-python не нужен: версию питона держит .python-version, и uv сам
+      # ставит её при первом `uv sync`. Единый источник версии, поэтому раннер
+      # и образ кита не могут разойтись.
+      - uses: astral-sh/setup-uv@v10.0.0
 
-      - name: Run tests and linter
-        run: |
-          make check
+      - name: Setup
+        run: make setup
+
+      - name: Run linter
+        run: make lint
+      - name: Run tests
+        run: make test
 
   deploy:
     needs: build
