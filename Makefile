@@ -41,6 +41,6 @@ test:
 check: install lint test
 
 test-coverage:
-	uv run coverage run manage.py test python_django_blog
+	uv run coverage run manage.py test
 	uv run coverage html
 	uv run coverage report

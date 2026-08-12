@@ -2,7 +2,7 @@ from django.core.exceptions import ObjectDoesNotExist
 from django.test import TestCase
 from django.urls import reverse
 
-from python_django_blog.articles.models import Article
+from articles.models import Article
 from python_django_blog.utils import get_test_data
 
 
