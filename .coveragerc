@@ -1,2 +1,2 @@
 [run]
-source = python_django_blog
+source = articles,python_django_blog

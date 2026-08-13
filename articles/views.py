@@ -7,8 +7,8 @@ from django.views.generic import (
     UpdateView,
 )
 
-from python_django_blog.articles.forms import ArticleForm
-from python_django_blog.articles.models import Article
+from articles.forms import ArticleForm
+from articles.models import Article
 
 
 class IndexView(ListView):

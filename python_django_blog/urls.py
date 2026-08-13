@@ -20,5 +20,5 @@ from python_django_blog import views
 urlpatterns = [
     path('', views.IndexView.as_view(), name='root'),
     path('about/', views.AboutView.as_view(), name='about'),
-    path('articles/', include('python_django_blog.articles.urls')),
+    path('articles/', include('articles.urls')),
 ]
