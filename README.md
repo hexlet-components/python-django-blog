@@ -6,9 +6,9 @@
 
 ## Requirements
 
-* Python 3.13+
-* uv
-* GNU Make
+- Python 3.13+
+- uv
+- GNU Make
 
 ## Setup
 
