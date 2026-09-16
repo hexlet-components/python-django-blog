@@ -15,7 +15,18 @@ dependencies = [
     "whitenoise>=6.12.0",
 ]
 
+[project.scripts]
+django-admin = "python_django_blog.admin:main"
+
 [dependency-groups]
 dev = [
     "ruff>=0.16.2",
 ]
+
+[build-system]
+requires = ["uv_build>=0.12.13,<0.13"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-name = ["python_django_blog", "articles"]
+module-root = ""
