@@ -3,7 +3,6 @@ from articles.models import Article
 
 
 class ArticleForm(ModelForm):
-
     class Meta:
         model = Article
-        fields = ['name', 'description']
+        fields = ["name", "description"]
