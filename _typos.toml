@@ -1,0 +1,3 @@
+[files]
+# Сгенерировано сборкой или make docs, либо входные данные тестов.
+extend-exclude = ["**/__fixtures__/**", "**/fixtures/**"]
