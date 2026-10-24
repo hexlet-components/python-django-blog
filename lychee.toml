@@ -8,4 +8,4 @@ max_cache_age = "1d"
 accept = ["200..=204", "429"]
 exclude_path = ["LICENSE", "node_modules", "vendor", "CHANGELOG.md"]
 # npmjs.com отвечает CI кодом 403 (защита от ботов), в браузере ссылки живые.
-exclude = ["^https://www.npmjs.com/", "^https?://localhost", "^https?://127\\.0\\.0\\.1"]
+exclude = ["^https://www.npmjs.com/", "^https?://localhost", "^https?://(www\\.)?linkedin\\.com/", "^https?://127\\.0\\.0\\.1"]
