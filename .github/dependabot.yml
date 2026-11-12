@@ -8,13 +8,17 @@ updates:
     directory: "/"
     schedule:
       interval: "monthly"
-    open-pull-requests-limit: 1
+    open-pull-requests-limit: 2
     labels: ["dependencies", "automated"]
     commit-message:
       prefix: "chore"
     groups:
-      uv-all:
+      uv-minor-patch:
         patterns: ["*"]
+        update-types: ["minor", "patch"]
+      uv-major:
+        patterns: ["*"]
+        update-types: ["major"]
 
   - package-ecosystem: "github-actions"
     cooldown:
@@ -22,13 +26,17 @@ updates:
     directory: "/"
     schedule:
       interval: "monthly"
-    open-pull-requests-limit: 1
+    open-pull-requests-limit: 2
     labels: ["dependencies", "automated"]
     commit-message:
       prefix: "chore"
     groups:
-      github-actions-all:
+      github-actions-minor-patch:
         patterns: ["*"]
+        update-types: ["minor", "patch"]
+      github-actions-major:
+        patterns: ["*"]
+        update-types: ["major"]
 
   - package-ecosystem: "docker"
     cooldown:
@@ -36,7 +44,7 @@ updates:
     directory: "/"
     schedule:
       interval: "monthly"
-    open-pull-requests-limit: 1
+    open-pull-requests-limit: 2
     labels: ["dependencies", "automated"]
     commit-message:
       prefix: "chore"
@@ -46,5 +54,9 @@ updates:
       - dependency-name: "python"
         versions: ["*rc*", "*a[0-9]*", "*b[0-9]*"]
     groups:
-      docker-all:
+      docker-minor-patch:
         patterns: ["*"]
+        update-types: ["minor", "patch"]
+      docker-major:
+        patterns: ["*"]
+        update-types: ["major"]
